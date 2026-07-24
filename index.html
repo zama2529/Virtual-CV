@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GCINA ZAMAMPULO MPULO - Resume</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600&display=swap');
+        
+        :root {
+            --primary: #2563eb;
+            --text: #1f2937;
+            --light: #f8fafc;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            color: white;
+            padding: 60px 50px 40px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            letter-spacing: -0.02em;
+        }
+        
+        .title {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            font-weight: 400;
+        }
+        
+        .contact-info {
+            margin-top: 25px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            font-size: 0.95rem;
+        }
+        
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+        
+        .contact-info a:hover {
+            opacity: 0.8;
+        }
+        
+        main {
+            padding: 50px;
+        }
+        
+        section {
+            margin-bottom: 45px;
+        }
+        
+        h2 {
+            font-size: 1.35rem;
+            color: var(--primary);
+            border-bottom: 3px solid #dbeafe;
+            padding-bottom: 8px;
+            margin-bottom: 22px;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+        
+        .summary {
+            font-size: 1.05rem;
+            color: #374151;
+            line-height: 1.75;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        
+        .skill-category {
+            background: #f8fafc;
+            padding: 22px;
+            border-radius: 12px;
+            border-left: 5px solid var(--primary);
+        }
+        
+        .skill-category h3 {
+            color: var(--primary);
+            margin-bottom: 12px;
+            font-size: 1.05rem;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        li {
+            padding: 6px 0;
+            position: relative;
+            padding-left: 22px;
+        }
+        
+        li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+        
+        .experience-item {
+            margin-bottom: 32px;
+        }
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .job-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .job-dates {
+            color: #64748b;
+            font-size: 0.95rem;
+            white-space: nowrap;
+        }
+        
+        .certificate {
+            background: #f8fafc;
+            padding: 16px 20px;
+            border-radius: 10px;
+            margin-bottom: 12px;
+            border-left: 4px solid #64748b;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #f1f5f9;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 20px 10px;
+            }
+            header {
+                padding: 50px 30px 35px;
+            }
+            .name {
+                font-size: 2.4rem;
+            }
+            main {
+                padding: 35px 25px;
+            }
+        }
+        
+        .print-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 10px 15px -3px rgb(37 99 235 / 0.3);
+            transition: all 0.2s;
+            z-index: 100;
+        }
+        
+        .print-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 25px -5px rgb(37 99 235 / 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1 class="name">GCINA ZAMAMPULO MPULO</h1>
+            <p class="title">BSc Information Technology Student | Aspiring Data Scientist & Software Engineer</p>
+            
+            <div class="contact-info">
+                <div>Newcastle, KwaZulu-Natal, South Africa</div>
+                <div><a href="mailto:gcinampulo04@gmail.com">gcinampulo04@gmail.com</a></div>
+                <div>+27 72 519 7897</div>
+                <div>
+                    <a href="https://linkedin.com/in/gcina-mpulo-9529b61b2" target="_blank">LinkedIn</a> • 
+                    <a href="https://github.com/zama2529" target="_blank">GitHub</a> • 
+                    <a href="https://zama2529.github.io/Virtual-CV/" target="_blank">Portfolio</a>
+                </div>
+            </div>
+        </header>
+        
+        <main>
+            <!-- Professional Summary -->
+            <section>
+                <h2>PROFESSIONAL SUMMARY</h2>
+                <p class="summary">
+                    Driven BSc Information Technology final-year student at North-West University with a strong academic background in data science, software development, and information security. Passionate about transforming both structured and unstructured data into elegant, intuitive solutions and valuable predictions. Exceptional student assistant in information security with proven leadership and communication skills.
+                </p>
+            </section>
+            
+            <!-- Technical Skills -->
+            <section>
+                <h2>TECHNICAL SKILLS</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Programming &amp; Development</h3>
+                        <ul>
+                            <li>Python (Pandas, NumPy, Pygame)</li>
+                            <li>SQL</li>
+                            <li>Java, C#, C++</li>
+                            <li>JavaScript</li>
+                            <li>Android Studio</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Data Science &amp; ML</h3>
+                        <ul>
+                            <li>Machine Learning</li>
+                            <li>Reinforcement Learning (PPO)</li>
+                            <li>Data Analysis &amp; Statistics</li>
+                            <li>Data Visualization</li>
+                            <li>Anomaly Detection</li>
+                            <li>Model Evaluation &amp; Cross-Validation</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Cloud, BI &amp; Analytics</h3>
+                        <ul>
+                            <li>Microsoft Azure (Event Hubs, Stream Analytics)</li>
+                            <li>Power BI (including AI visuals)</li>
+                            <li>Excel &amp; Business Intelligence</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Experience -->
+            <section>
+                <h2>EXPERIENCE</h2>
+                
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div class="job-title">IEC Staff</div>
+                        <div class="job-dates">April 2026 — May 2026</div>
+                    </div>
+                    <ul>
+                        <li>Facilitated smooth voting operations and guided citizens through official voting protocols during national/regional elections.</li>
+                        <li>Upheld strict compliance, security, and administrative standards at voting stations.</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div class="job-title">Student Assistant — CMPG215</div>
+                        <div class="job-dates">Feb 2026 — July 2026</div>
+                    </div>
+                    <p><strong>North-West University</strong></p>
+                    <ul>
+                        <li>Guided undergraduate students in information security principles, concepts and coursework.</li>
+                        <li>Responded to student enquiries and provided academic support.</li>
+                        <li>Maintained an encouraging environment to promote student engagement and wellbeing.</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <!-- Education -->
+            <section>
+                <h2>EDUCATION</h2>
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div class="job-title">BSc Information Technology</div>
+                        <div class="job-dates">2026 (Expected)</div>
+                    </div>
+                    <p><strong>North-West University</strong></p>
+                    <p><em>In Progress — Graduating December 2026</em></p>
+                </div>
+            </section>
+            
+            <!-- Certificates -->
+            <section>
+                <h2>CERTIFICATES</h2>
+                <div class="certificate">The Assessment of Sustainability Knowledge Certificate (Sulitest)</div>
+                <div class="certificate">Certificate in Full Stack Development (FNB South Africa)</div>
+                <div class="certificate">What is an Entrepreneur? (Trace Academia)</div>
+                <div class="certificate">Certificate in African Insight (University of Johannesburg)</div>
+                <div class="certificate">Certificate in Artificial Intelligence (University of Johannesburg)</div>
+            </section>
+        </main>
+    </div>
+    <button onclick="window.print()" class="print-btn">🖨️ Print / Save as PDF</button>
+    <script>
+        window.addEventListener('beforeprint', () => {
+            document.body.style.background = 'white';
+        });
+    </script>
+</body>
+</html>
